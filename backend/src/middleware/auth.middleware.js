@@ -1,5 +1,13 @@
 import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
+Content-Security-Policy: 
+  default-src 'self'; 
+  script-src 'self'; 
+  style-src 'self'; 
+  font-src 'self' data:; 
+  img-src 'self' https: data:; 
+  connect-src 'self'; 
+  object-src 'none';
 
 export const protectRoute = async (req, res, next) => {
     try {
